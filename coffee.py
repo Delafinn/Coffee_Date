@@ -10,7 +10,7 @@ else :
     print("what a nice name")
 time.sleep(1)
 
-coffeequestion = input(name1 + " do you like coffee?") # making a loop
+coffeequestion = input(name1 + " do you like coffee?") 
 
 while (coffeequestion != "yes" and coffeequestion != "no"): # loop if user doesn't say yes or no.
     print(name1 + " I'm gonna grab a coffee. \n   You are more than welcome to join me to the coffee shop.")
