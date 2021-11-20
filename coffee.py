@@ -1,29 +1,33 @@
 import time # used to slow down dialogue
-
-
-name1 = input("what is your name?") # asking the user their name
-if name1 == "neo" :
-    print("Mr.Anderson.")
-if name1 == "dude" :
-    print("sah dude!")
-else :
-    print("what a nice name")
-time.sleep(2)
-
-coffeequestion = input(name1 + " do you like coffee?")
-
-while (coffeequestion != "yes" and coffeequestion != "no"): # loop if user doesn't say yes or no.
-    print(name1 + " I'm gonna grab a coffee.")
-    time.sleep(3)
-    coffeequestion = input(name1 + " But really do you like coffee?")
-
-if coffeequestion == "yes"  :
-    print(name1 + " Lets get some coffee.")
+while True: # Main loop
+    name1 = input("what is your name?") # asking the user their name
+    if name1 == "neo" :
+        print("Mr.Anderson.")
+    if name1 == "dude" :
+        print("sah dude!")
+    else :
+        print("what a nice name")
     time.sleep(2)
-    fq = input("What's your favorite coffee drink?")
 
+    coffeequestion = input(name1 + " do you like coffee? type either (y)es or (n)o ")
 
-if coffeequestion == "no" :
-    print(name1 + " I'm gonna grab a coffee. \n   You are more than welcome to join me to the coffee shop")
-    time.sleep(3)
-    sq = input(name1 + " Are you joining?")
+    while (coffeequestion != "yes" and coffeequestion != "y" and coffeequestion != "no" and coffeequestion != "n"): # loop if user doesn't say yes or no.
+        coffeequestion = input(name1 + "  Really do you like coffee?")
+
+    if coffeequestion == "yes" or coffeequestion ==  "y":
+        print(name1 + " Lets get some coffee.")
+        time.sleep(2)
+        fq = input("What's your favorite coffee drink?")
+        if fq == "americano":
+                print("That's my favorite coffee too!")
+        else:
+                print("nice!")
+
+    if coffeequestion == "no" or coffeequestion == "n":
+        print(name1 + " I'm gonna grab a coffee. \n   You are more than welcome to join me to the coffee shop")
+        time.sleep(3)
+        sq = input(name1 + " Are you joining? type either (y)es or (n)o")
+        if sq == "no" or sq == "n":
+                print("see you soon!")
+        if sq == "yes" or sq ==  "y":
+                print("sweet!")
